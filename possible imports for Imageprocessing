@@ -1,0 +1,52 @@
+# ============================================================
+# Digital Image Processing Lab Final — Complete Imports
+# Paste this into the FIRST Colab code cell.
+# ============================================================
+
+# Optional: run once in Google Colab if seaborn-image is required.
+# !pip -q install seaborn-image
+
+# Core numerical and visualization libraries
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+# Image input/output and URL loading
+import cv2
+import requests
+import io
+from io import BytesIO
+from PIL import Image, ImageOps, ImageChops
+
+# Scikit-image base imports
+import skimage
+import skimage as ski
+from skimage import data, color, exposure, feature, filters, measure, morphology, segmentation, transform, util
+
+# Scikit-image specific functions used in labs
+from skimage.util import random_noise
+from skimage.exposure import match_histograms
+from skimage.color import label2rgb
+from skimage.filters import threshold_otsu, threshold_local, unsharp_mask
+from skimage.feature import canny
+from skimage.morphology import erosion, dilation
+from skimage.transform import hough_circle, hough_circle_peaks, probabilistic_hough_line
+from skimage.draw import circle_perimeter
+
+# SciPy spatial filters, connected components, and DCT
+from scipy import ndimage as ndi
+from scipy.ndimage import convolve, median_filter, label
+from scipy.fftpack import dct, idct
+
+# Optional package used by several class notebooks for image grids
+# import seaborn_image as isns
+
+# Optional interactive brightness slider used in Lab 3
+# from ipywidgets import interact
+
+# Optional: needed only for SAM2 / Segment Anything model code
+# !pip -q install transformers accelerate
+# import torch
+# from transformers import Sam2Processor, Sam2Model
+# from accelerate import Accelerator
