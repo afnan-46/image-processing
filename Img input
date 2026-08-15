@@ -1,0 +1,16 @@
+!pip install opencv-python
+
+import cv2
+import matplotlib.pyplot as plt
+
+# Load the image and store it in the img variable
+# OpenCV reads images as BGR by default
+img_bgr = cv2.imread('img.png')// img address
+
+# Convert BGR to RGB for correct notebook visualization
+img = cv2.cvtColor(img_bgr, cv2.COLOR_BGR2RGB)
+
+# Display the image in the notebook
+plt.imshow(img)
+plt.axis('off')
+plt.show()
